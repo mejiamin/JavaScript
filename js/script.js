@@ -1,11 +1,10 @@
 
 // script.js
 
-let startNumber = 1;
-let multiplier = 4;
-let quantity = 7;
+let lastNumber = 10;
+let sum = 0;
 
-for (let i = 0; i < quantity; i++) {
-    console.log(startNumber);
-    startNumber *= multiplier;
+while (1 <= lastNumber) {
+    sum += lastNumber
+    lastNumber--;
 }
