@@ -1,10 +1,12 @@
 
 // script.js
 
-let lastNumber = 10;
-let sum = 0;
+let lastNumber = 8;
+let multiplicationResult = 1;
 
-while (1 <= lastNumber) {
-    sum += lastNumber
-    lastNumber--;
+for (let i = 1; i <= lastNumber; i++) {
+
+    if (i % 2 === 0) {
+        multiplicationResult *= i;
+    }
 }
