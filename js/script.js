@@ -1,12 +1,21 @@
 
 // script.js
 
-let lastNumber = 8;
-let multiplicationResult = 1;
 
-for (let i = 1; i <= lastNumber; i++) {
+// Состав смузи
 
-    if (i % 2 === 0) {
-        multiplicationResult *= i;
-    }
-}
+let liquids = ['вода', 'молоко', 'сок', 'чай', 'йогурт'];
+let fruits = ['киви', 'банан', 'персик', 'манго', 'груша', 'ананас'];
+let greens = ['мята', 'шпинат', 'руккола', 'петрушка', 'базилик'];
+
+// Выбор посетителя
+
+let chosenLiquid = 1;
+let chosenFruit = 3;
+let chosenGreen = 2;
+
+// Заказ
+
+let order = '';
+
+order = 'Основа — ' + liquids[chosenLiquid - 1] + ', фрукт — ' + fruits[chosenFruit - 1] + ', зелень — ' + greens[chosenGreen - 1];
