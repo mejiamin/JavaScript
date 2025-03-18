@@ -1,21 +1,13 @@
 
 // script.js
 
+let groceries = ['чай', 'шпроты', 'печенье', 'сахар', 'чипсы'];
+let shoppingList = '';
 
-// Состав смузи
-
-let liquids = ['вода', 'молоко', 'сок', 'чай', 'йогурт'];
-let fruits = ['киви', 'банан', 'персик', 'манго', 'груша', 'ананас'];
-let greens = ['мята', 'шпинат', 'руккола', 'петрушка', 'базилик'];
-
-// Выбор посетителя
-
-let chosenLiquid = 1;
-let chosenFruit = 3;
-let chosenGreen = 2;
-
-// Заказ
-
-let order = '';
-
-order = 'Основа — ' + liquids[chosenLiquid - 1] + ', фрукт — ' + fruits[chosenFruit - 1] + ', зелень — ' + greens[chosenGreen - 1];
+for (let i = 0; i < groceries.length; i++) {
+    if (1 <= i) {
+        shoppingList += ', ';
+    }
+    shoppingList += groceries[i];
+}
+console.log(shoppingList);
