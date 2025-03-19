@@ -1,13 +1,36 @@
 
 // script.js
 
-let groceries = ['чай', 'шпроты', 'печенье', 'сахар', 'чипсы'];
-let shoppingList = '';
+let getPrice = function (inHours, isUrgent) {
+    let rate = 1500;
 
-for (let i = 0; i < groceries.length; i++) {
-    if (1 <= i) {
-        shoppingList += ', ';
+    if (isUrgent) {
+        inHours /= 2;
+        rate *= 2.5;
     }
-    shoppingList += groceries[i];
+
+    if (inHours > 150) {
+        rate -= 250;
+    }
+
+    return inHours * rate;
 }
-console.log(shoppingList);
+
+let getProfitableProject = function (inHours, profit) {
+    let urgentProject = getPrice(inHours, true) - profit;
+    let ordinaryProject = getPrice(inHours, false);
+    let value;
+    let expences;
+
+    if (urgentProject < ordinaryProject) {
+        value = 'срочный';
+        expences = urgentProject;
+    } else {
+        value = 'обычный';
+        expences = ordinaryProject;
+    }
+
+    return 'Выгодней ' + value + ' проект. Потратишь на него ' + expences;
+};
+
+getProfitableProject(200, 5000);
