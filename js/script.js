@@ -1,36 +1,11 @@
 
 // script.js
 
-let getPrice = function (inHours, isUrgent) {
-    let rate = 1500;
-
-    if (isUrgent) {
-        inHours /= 2;
-        rate *= 2.5;
+function checkVehicle(quantity, weight) {
+    if (quantity === 2 && weight < 100) {
+        return 'Парковка разрешена';
     }
-
-    if (inHours > 150) {
-        rate -= 250;
-    }
-
-    return inHours * rate;
+    return 'Вам здесь не место! Мяу!';
 }
 
-let getProfitableProject = function (inHours, profit) {
-    let urgentProject = getPrice(inHours, true) - profit;
-    let ordinaryProject = getPrice(inHours, false);
-    let value;
-    let expences;
-
-    if (urgentProject < ordinaryProject) {
-        value = 'срочный';
-        expences = urgentProject;
-    } else {
-        value = 'обычный';
-        expences = ordinaryProject;
-    }
-
-    return 'Выгодней ' + value + ' проект. Потратишь на него ' + expences;
-};
-
-getProfitableProject(200, 5000);
+checkVehicle(2, 90);
