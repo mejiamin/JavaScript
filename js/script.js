@@ -1,8 +1,18 @@
 
 // script.js
 
-function calculatePressure(density, depth) {
-    return Math.round(density * 9.8 * depth);
+let daysOfWeek = {
+    'понедельник': 'monday',
+    'вторник': 'tuesday',
+    'среда': 'wednesday',
+    'четверг': 'thursday',
+    'пятница': 'friday',
+    'суббота': 'saturday',
+    'воскресенье': 'sunday'
+};
+
+function translate(russian, object) {
+    return russian + ' по-английски: ' + object[russian];
 }
 
-calculatePressure(1000, 5);
+translate('вторник', daysOfWeek);
