@@ -1,8 +1,13 @@
 
 // script.js
 
-let fahrenheitTemperature = 77;
+let length = 0.45;
+let weight = 4.5;
+let fatMass = 0.8;
 
-let celsiusTemperature = 5 / 9 * (fahrenheitTemperature - 32);
+let bodyMassIndex = Math.round(weight / length ** 2);
 
-console.log(celsiusTemperature);
+let fatPercent = Math.round(fatMass / weight * 100);
+
+console.log(bodyMassIndex);
+console.log(fatPercent);
