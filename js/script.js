@@ -1,9 +1,8 @@
 
 // script.js
 
-let routeDistance = 78;
-let averageSpeed = 80;
+let fahrenheitTemperature = 77;
 
-let routeTime = Math.round((routeDistance / averageSpeed) * 1.6);
+let celsiusTemperature = 5 / 9 * (fahrenheitTemperature - 32);
 
-console.log(routeTime);
+console.log(celsiusTemperature);
