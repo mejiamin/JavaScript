@@ -1,18 +1,9 @@
 
 // script.js
 
-let daysOfWeek = {
-    'понедельник': 'monday',
-    'вторник': 'tuesday',
-    'среда': 'wednesday',
-    'четверг': 'thursday',
-    'пятница': 'friday',
-    'суббота': 'saturday',
-    'воскресенье': 'sunday'
-};
+let routeDistance = 78;
+let averageSpeed = 80;
 
-function translate(russian, object) {
-    return russian + ' по-английски: ' + object[russian];
-}
+let routeTime = Math.round((routeDistance / averageSpeed) * 1.6);
 
-translate('вторник', daysOfWeek);
+console.log(routeTime);
