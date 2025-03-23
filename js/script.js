@@ -1,13 +1,17 @@
 
 // script.js
 
-let length = 0.45;
-let weight = 4.5;
-let fatMass = 0.8;
+let price = 4000;
+let discountedPrice;
 
-let bodyMassIndex = Math.round(weight / length ** 2);
+if (1000 <= price && price < 3000) {
+    discountedPrice = price - (price * 5 / 100);
+} else if (3000 <= price && price < 5000) {
+    discountedPrice = price - (price * 10 / 100);
+} else if (5000 <= price) {
+    discountedPrice = price - (price * 15 / 100);
+} else {
+    discountedPrice = price;
+}
 
-let fatPercent = Math.round(fatMass / weight * 100);
-
-console.log(bodyMassIndex);
-console.log(fatPercent);
+console.log(discountedPrice);
