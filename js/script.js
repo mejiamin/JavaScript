@@ -1,22 +1,16 @@
 
 // script.js
 
-let time = 15;
+let number = 123;
+let quantity = 0;
 
-let goToDairy = false;      // На молокозавод
-let goToStore = false;      // В магазин
-let goToMarket = false;     // Н рынок
-
-let messageDairy
-
-if ((8 <= time && time < 13) || (14 <= time && time < 19)) {
-    goToDairy = true;
-} else if ((9 <= time && time < 14) || (15 <= time && time < 17)) {
-    goToStore = true;
-} else if (7 <= time && time < 20) {
-    goToMarket = true;
+for (let i = 1; number / i >= 1; i *= 10) {
+    quantity++;
+    console.log(quantity);
 }
 
-console.log(goToDairy);
-console.log(goToStore);
-console.log(goToMarket);
+// while (1 <= number) {
+//     number /= 10;
+//     quantity++;
+//     console.log(quantity);
+// }
