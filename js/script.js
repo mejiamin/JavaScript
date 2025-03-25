@@ -1,16 +1,30 @@
 
 // script.js
 
-let number = 123;
-let quantity = 0;
 
-for (let i = 1; number / i >= 1; i *= 10) {
-    quantity++;
-    console.log(quantity);
+
+
+
+let numbers = [2, 4, 7, 4, 7, 2];
+let number = 4;
+
+let lastIndex = -1;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === number) {
+        lastIndex = i;
+    }
 }
 
-// while (1 <= number) {
-//     number /= 10;
-//     quantity++;
-//     console.log(quantity);
-// }
+console.log(lastIndex);
+
+
+
+
+
+// let numbers = [2, 4, 7, 4, 7, 2];
+// let number = 4;
+
+// let lastIndex = numbers.lastIndexOf(number);
+
+// console.log(lastIndex);
