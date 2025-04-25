@@ -5,173 +5,404 @@
 
 
 
-//  --- Array in tasks in average   ---
+//  --- Basics in tasks in advanced   ---
 
-// let luggage = ['пакет', 'мяч', 'тапки', 'когтеточка', 'коробка', 'миска', 'мята'];
-// let startIndex = 2;       //  Стартовый индекс
-// let quantity = 3;         //  Количество вещей
-// let chosenLuggage = [];   //  Ожидаю результать
+// let firstLeg = 300;     // Длины катетов
+// let secondLeg = 700;    // Длины катетов
 
-// for (let i = startIndex; i < startIndex + quantity; i++) {
-//     chosenLuggage.push(luggage[i]);
+// let hypotenuse = Math.round(Math.sqrt(firstLeg ** 2 + secondLeg ** 2));    // Результат гипотенуза
+// console.log(hypotenuse);
+
+// let perimeter = firstLeg + secondLeg + hypotenuse ;    // Результат периметра
+// console.log(perimeter);
+
+
+
+
+
+//  --- Basics in tasks in advanced   ---
+
+// let age = 5;                    // Возраст
+// let pulseAtRest = 60;           // ЧСС в покое
+// let intensity = 75;             // Интенсивность
+
+// let pulseAtWorkout = Math.round(((220 - age) - pulseAtRest) * intensity / 100 + pulseAtRest);     // ЧСС для тренировки
+
+// console.log(pulseAtWorkout);
+
+
+
+
+
+//  --- Basics in tasks in advanced   ---
+
+// let weight = 5;        // Вес
+// let length = 60;       // Длина
+// let age = 5;        // Возраст
+// let activityRate = 1.725;    // Коеффициент
+
+// let metabolism = 88.362 + (13.397 * weight) + (4.799 * length) - (5.677 * age);            // Метаболизм
+
+// let calorieRate = Math.round(metabolism * activityRate);
+
+// let proteins = Math.round(calorieRate * 0.40);
+// let fats = Math.round(calorieRate * 0.25);
+// let carbohydrates = Math.round(calorieRate * 0.35);
+
+// console.log(calorieRate);
+// console.log(proteins);
+// console.log(fats);
+// console.log(carbohydrates);
+
+
+
+
+
+//  --- Conditions in tasks in advanced   ---
+
+// let temperature = 20;
+// let itsRaining = false;
+
+// let minutes;
+
+// if (itsRaining) {
+//     minutes = 0;
+// }
+// else if (temperature < 0 || temperature > 35) {
+//     minutes = 0;
+// }
+// else if (temperature === 20) {
+//     minutes = 20;
+// }
+// else if (0 < temperature && temperature < 20) {
+//     minutes = temperature;
+// }
+// else if (20 < temperature && temperature < 35) {
+//     minutes = 20 - (temperature - 20);
 // }
 
-// console.log(chosenLuggage);
 
 
 
 
+//  --- Loops in tasks in advanced   ---
 
-//  --- Array in tasks in average   ---
+// let days = 10;              // 10 // Дней в периоде
+// let period = 3;             // Как часто я ем протеин (раз в три дня)
+// let workDayAmount = 200;    // Количество протеина в будние
+// let weekendAmount = 100;    // Количество протеина в выходные
 
-// let books = ['Улисс', 'Маугли', 'Сияние', 'Ревизор', 'Гамлет', 'Обломов', 'Дюймовочка', 'Шантарам', 'Вий', 'Сильмариллион', 'Оно'];
-// let minNumber = 3;
-// let maxNumber = 5;
-// let filteredBooks = [];
+// let total = 0;
 
-// for (let i = 0; i < books.length; i++) {
-//     if (minNumber <= books[i].length && books[i].length <= maxNumber) {
-//         filteredBooks.push(books[i]);
+// for (let i = period; i <= days; i += period) {
+//     if (i % 7 === 6 || i % 7 === 0) {
+//         total += weekendAmount;
+//     } else {
+//         total += workDayAmount;
 //     }
 // }
 
-// console.log(filteredBooks);
+// console.log(total);
 
 
 
 
 
-//  --- Array in tasks in average   ---
+//  --- Loops in tasks in advanced   ---
 
-// // Алфавит
-// let symbols = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я', ' ', '.', ',', '—', '!'];
+// let poly = 1221;
+// let ylop = 0;
+// let isPalindrome = false;
 
-// // Смещение
-// let shift = 10;
+// let number = poly;
 
-// // Закодированное сообщение
-// let encodedSymbols = [8, 28, 36, 52, 56, 40, 23, 31, 56, 39, 38, 28, 48, 52, 58, 56, 38, 27, 32, 37, 56, 40, 23, 31, 56, 39, 38, 41, 39, 32, 57];
+// while (number > 0) {
+//     ylop += number % 10;              // 1
+//     ylop *= 10;                       // 10
+//     number = number - number % 10;    // 1220
+//     number = number / 10;             // 1098
+// }
+// ylop = ylop / 10;
+// console.log(ylop);                    // 1221
 
-// // Раскодированное сообщение
-// let decodedMessage = '';
+// if (poly === ylop) {
+//     isPalindrome = true;
+// }
+// console.log(isPalindrome);            // true
 
-// for (let i = 0; i < encodedSymbols.length; i++) {
-//     decodedMessage += symbols[(encodedSymbols[i] + shift) % symbols.length];
+
+
+
+
+//  --- Arrays in tasks in advanced   ---
+
+// let usersData = ['Виталий Иванович', 'Иннокентий Петрович', 'Александр Александрович', 'Игорь Олегович', 'Евгений Петрович', 'Игнат Денисович', 'Сергей Александрович', 'Семён Петрович'];
+// let query = 'Александрович';
+// let matchingUsers = 0;
+
+// matchingUsers = usersData.filter((item) => item.indexOf(query) !== -1);
+
+// console.log(matchingUsers.length);
+
+
+
+
+
+//  --- Arrays in tasks in advanced   ---
+
+// let fibonacciNumbers = [1, 1];
+// let numbersQuantity = 7;
+
+// for (let i = 1; i <= numbersQuantity; i++) {
+//     fibonacciNumbers.push(fibonacciNumbers[i - 1] + fibonacciNumbers[i]);
+// }
+// console.log(fibonacciNumbers);
+
+
+
+
+
+//  --- Arrays in tasks in advanced   ---
+
+// let indicators = ['сила', 'гибкость', 'выносливость', 'скорость', 'ловкость'];
+// let levels = [8, 15, 9, 12, 11];
+// let trainingTime = 30;
+
+// if (trainingTime <= 30) {
+//     levels[indicators.indexOf('скорость')] += 3;
+//     levels[indicators.indexOf('ловкость')] += 3;
+// } else if (30 < trainingTime && trainingTime <= 60) {
+//     levels[indicators.indexOf('гибкость')] += 3;
+// } else if (60 < trainingTime) {
+//     levels[indicators.indexOf('сила')] += 2;
+//     levels[indicators.indexOf('выносливость')] += 2;
 // }
 
-// console.log(decodedMessage);
+// console.log(levels);
 
 
 
 
 
-//  --- Function in tasks in average   ---
+//  --- Arrays in tasks in advanced   ---
 
-// function calculate(firstNumber, secondNumber, operator) {
-//     let x = Number(firstNumber);
-//     let y = Number(secondNumber);
+// let numbers = [1, 4, 5, 9, 2, 5, 1];
+// let uniqueNumbers = [];
 
-//     if (operator === '+') {
-//         return x + y;
-//     } else if (operator === '-') {
-//         return x - y;
-//     } else if (operator === '*') {
-//         return x * y;
-//     } else if (operator === '/') {
-//         return x / y;
-//     }
-// }
+// uniqueNumbers = numbers.filter((item) =>
+//     numbers.indexOf(item) === numbers.lastIndexOf(item));
 
-// calculate('5', '5', '*');
+// console.log(uniqueNumbers);
 
 
 
 
 
-//  --- Function in tasks in average   ---
+//  --- Arrays in tasks in advanced   ---
 
-// function getDiet(calorie, limit) {
-//     let quantity = 0;
-
-//     while (limit >= calorie[quantity]) {
-//         limit -= calorie[quantity];
-//         quantity++;
-//     }
-
-//     return quantity;
-// }
-
-// getDiet([10, 20, 30, 40, 90], 100);
+// let numbers = [1, 3, 5, 7, 9, 11];
+// numbers.reverse();
 
 
 
 
 
-//  --- Function in tasks in average   ---
+//  --- Arrays in tasks in advanced   ---
 
-// let documents = ["03112018", "02092016", "11092015", "05052018", "07072007", "11112011"];
+// let numbers = [3, 5, 15, 6, 2, 1];
+// numbers.sort((a, b) => a - b);
 
-// function getDocumentsNumbers(arr, year) {
-//     let quantity = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i].indexOf(year, 4) === 4) {
-//             quantity++;
+
+
+
+
+//  --- Functions in tasks in advanced   ---
+
+// function getYears(first, last, summa) {
+//     let olympYears = [];
+//     for (let i = first; i <= last; i++) {
+//         let yearsArray = i + [];
+//         let sum = 0;
+//         for (let j = 0; j < yearsArray.length; j++) {
+//             sum += +(yearsArray[j]);
+//         }
+//         if (sum === summa) {
+//             olympYears.push(i);
 //         }
 //     }
-//     return quantity;
+//     return olympYears;
+// }
+
+
+
+
+
+//  --- Functions in tasks in advanced   ---
+
+// function getDayOfWeek(firstDay, requiredDay) {
+//     let week = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+//     let requiredDayIndex = (week.indexOf(firstDay) + requiredDay - 1) % 7;
+//     return week[requiredDayIndex];
+// }
+
+
+
+
+
+//  --- Functions in tasks in advanced   ---
+
+// function calculateRoots(a, b, c) {
+//     let D = b * b - 4 * a * c;
+//     if (D < 0) {
+//         return 'Корней нет';
+//     } else if (D === 0) {
+//         return 'Корень равен ' + (-b / (2 * a));
+//     } else if (0 < D) {
+//         return 'Первый корень равен ' + ((-b + Math.sqrt(D)) / (2 * a)) + ', второй корень равен ' + ((-b - Math.sqrt(D)) / (2 * a));
+//     }
+//     return result;
+// }
+
+// calculateRoots(1, -2, -3);
+
+
+
+
+
+//  --- Functions in tasks in advanced   ---
+
+// let calculateDeposit = function (deposit, percent, time, capitalization) {
+//     if (!capitalization) {
+//         deposit += deposit * percent * time / 100 / 12;
+//     } else {
+//         for (let i = 0; i < time; i++) {
+//             deposit += deposit * percent / 100 / 12;
+//         }
+//     }
+//     return Math.floor(deposit);
 // };
 
-// getDocumentsNumbers(documents, 2018);
+// calculateDeposit(100000, 12, 1);
 
 
 
 
 
-//  --- Function in tasks in average   ---
+//  --- Functions in tasks in advanced   ---
 
-// let incomeTax = 13;
-// let contributions = 30;
-
-// function calculateExpenses(netSalary) {
-//     return Math.round(netSalary / (100 - incomeTax) * 100 * (contributions / 100 + 1));
-// }
-
-// calculateExpenses(100000);
-
-
-
-
-
-//  --- Array in tasks in average   ---
-
-// function getRepeats(arr) {
-//     let object = {};
-
-//     for (let i = 0; i < arr.length; i++) {
-//         if (!(arr[i] in object)) {
-//             object[arr[i]] = 1;
-//         } else {
-//             object[arr[i]] += 1;
+// let calculateDeposit = function (deposit, percent, time, capitalization) {
+//     if (!capitalization) {
+//         deposit += deposit * percent * time / 100 / 12;
+//     } else {
+//         for (let i = 0; i < time; i++) {
+//             deposit += deposit * percent / 100 / 12;
 //         }
 //     }
+//     return Math.floor(deposit);
+// };
 
-//     return object;
-// }
-
-// getRepeats(["картошка","картошка","кофе","торт","салат","кофе","торт","картошка"]);
-
-
-
-
-
-//  --- Array in tasks in average   ---
-
-// function getZippedArrays(name, value) {
-//     let obj = {};
-//     for (let i = 0; i < name.length; i++) {
-//         obj[name[i]] = value[i];
+// let getProfitableDeposit = function (deposit, month, percent, percentNew) {
+//     let contribution = calculateDeposit(deposit, percent, month, false);
+//     let capContribution = calculateDeposit(deposit, percentNew, month, true);
+//     if (contribution > capContribution) {
+//         return 'Выбирай обычный вклад. Получишь ' + contribution;
+//     } else {
+//         return 'Выбирай капитализацию. Получишь ' + capContribution;
 //     }
-//     return obj;
+// };
+
+// getProfitableDeposit(250000, 14, 7, 6.8);
+
+
+
+
+
+//  --- Arrays in tasks in advanced   ---
+
+// let data = [
+//     {
+//         name: 'Петя',
+//         age: 5
+//     },
+//     {
+//         name: 'Лёля',
+//         age: 2
+//     },
+//     {
+//         name: 'Сима',
+//         age: 3
+//     }
+// ];
+
+// let getSortedArray = function (array, key) {
+
+//     for (let j = 0; j < array.length; j++) {
+//         for (let i = 0; i < array.length; i++) {
+
+//             if (array[j][key] < array[i][key]) {
+//                 let swap = array[i];
+//                 array[i] = array[j];
+//                 array[j] = swap;
+
+//             };
+//         };
+//     };
+
+//     return array;
+// };
+
+// // const getSortedArray = (array, key) => array.sort((a,b) => a[key] - b[key]);
+
+// getSortedArray(data, 'age');
+
+
+
+
+
+//  --- Arrays in tasks in advanced   ---
+
+// let keys = ['имя', 'любимый цвет', 'любимое блюдо'];
+
+// let values = [
+//     ['Василий', 'красный', 'борщ'],
+//     ['Мария'],
+//     ['Иннокентий', 'жёлтый', 'пельмени', '18', 'Азовское']
+// ];
+
+// let data = [
+//     {
+//         'имя': 'Василий',
+//         'любимый цвет': 'красный',
+//         'любимое блюдо': 'борщ'
+//     },
+//     {
+//         'имя': 'Мария'
+//     },
+//     {
+//         'имя': 'Иннокентий',
+//         'любимый цвет': 'жёлтый',
+//         'любимое блюдо': 'пельмени'
+//     }
+// ];
+
+// let getData = function (keysArray, arrayOfDataArrays) {
+//     let array = [];
+//     for (let i = 0; i < arrayOfDataArrays.length; i++) {
+//         let obj = {};
+//         for (let j = 0; j < keysArray.length; j++) {
+//             if (arrayOfDataArrays[i][j]) {
+//                 obj[keysArray[j]] = arrayOfDataArrays[i][j];
+//             }
+//         }
+//         array.push(obj);
+//     }
+//     return array;
 // }
 
-// getZippedArrays(['имя', 'фамилия', 'отчество'], ['Семён', 'Василенко', 'Эльдарович']);
+// // const getData = (keys, data) => data.map(item => item = keys.reduce(
+// //     (acc, cur, i) => {
+// //         item[i] ? acc[cur] = item[i] : null;
+// //         return acc;
+// //     }, {}));
+
+// getData(keys, values, data);
